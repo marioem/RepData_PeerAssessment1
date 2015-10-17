@@ -59,7 +59,7 @@ pander(tbl, style = "rmarkdown")
 
 ```r
 daily <- df %>% group_by(interval) %>% summarise(mn = mean(steps, na.rm = T))
-plot(daily, type = "l", main = "Average number of steps per 5-minutes inverval", xaxt = "n")
+plot(daily, type = "l", main = "Average number of steps per 5-minutes inverval", xaxt = "n", ylab = "Average number of steps")
 axis(side = 1, at = c(0, 500, 1000, 1500, 2000), labels = c("00:00", "05:00", "10:00", "15:00", "20:00"))
 ```
 
