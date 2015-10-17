@@ -129,9 +129,9 @@ hist(totstepsday2$tot, main = "Histogram of total number of steps per day", xlab
 
 ![](PA1_template_files/figure-html/hist2-1.png) 
 
-Comparing this histogram to the one generated for data set containign missing values it can be seen that the most significant difference is in the first bin (0-5000 steps per day). Knowing how the missing values affect the dataset (missing number of steps for the whole day) it is obvious, that after imputing data for those days the number of days (frequency) with low total number of steps will decrease.
+Comparing this histogram to the one generated for data set containing missing values it can be seen that the most significant difference is in the first bin (0-5000 steps per day). Knowing how the missing values affect the dataset (missing number of steps for the whole day) it is obvious, that after imputing data for those days the number of days (frequency) with low (in particular with 0) total number of steps will decrease.
 
-Imputing missing values increases both the mean and the median of the total daily number of steps, although for the median it is not a significant increase. Values before and after imputting can be seen in the following table:
+Imputing missing values increases both the mean and the median of the total daily number of steps, although the median to a lesser degree. Values before and after imputting can be seen in the following table:
 
 
 ```r
