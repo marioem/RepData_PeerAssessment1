@@ -40,17 +40,17 @@ The mean and median values of the total number of steps taken per day is shown i
 
 ```r
 require(pander)
-pander(tbl)
+
+pander(tbl, style = "rmarkdown")
 ```
 
 
----------------------
-   &nbsp;     values 
------------- --------
-  **mean**     9354  
 
- **median**   10395  
----------------------
+|    &nbsp;    |  values  |
+|:------------:|:--------:|
+|   **mean**   |   9354   |
+|  **median**  |  10395   |
+
   
   
   
@@ -140,17 +140,16 @@ newmedian <- median(totstepsday2$tot)
 
 tbl2 <- cbind(cbind(mean = c(origmean,newmean)), cbind(median = c(origmedian, newmedian)))
 rownames(tbl2) <- c("Data with missing values", "Data with imputed values")
-pander(tbl2)
+pander(tbl2, style = "rmarkdown")
 ```
 
 
-----------------------------------------------
-            &nbsp;              mean   median 
------------------------------- ------ --------
- **Data with missing values**   9354   10395  
 
- **Data with imputed values**  10821   11015  
-----------------------------------------------
+|             &nbsp;             |  mean  |  median  |
+|:------------------------------:|:------:|:--------:|
+|  **Data with missing values**  |  9354  |  10395   |
+|  **Data with imputed values**  | 10821  |  11015   |
+
   
   
   

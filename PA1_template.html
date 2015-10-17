@@ -86,12 +86,9 @@ tbl &lt;- cbind(values = c(origmean, origmedian))
 rownames(tbl) &lt;- c(&quot;mean&quot;, &quot;median&quot;)</code></pre>
 <p>The mean and median values of the total number of steps taken per day is shown in the following table:</p>
 <pre class="r"><code>require(pander)
-pander(tbl)</code></pre>
+
+pander(tbl, style = &quot;rmarkdown&quot;)</code></pre>
 <table>
-<colgroup>
-<col width="18%"></col>
-<col width="11%"></col>
-</colgroup>
 <thead>
 <tr class="header">
 <th align="center"> </th>
@@ -159,13 +156,8 @@ newmedian &lt;- median(totstepsday2$tot)
 
 tbl2 &lt;- cbind(cbind(mean = c(origmean,newmean)), cbind(median = c(origmedian, newmedian)))
 rownames(tbl2) &lt;- c(&quot;Data with missing values&quot;, &quot;Data with imputed values&quot;)
-pander(tbl2)</code></pre>
+pander(tbl2, style = &quot;rmarkdown&quot;)</code></pre>
 <table>
-<colgroup>
-<col width="43%"></col>
-<col width="9%"></col>
-<col width="11%"></col>
-</colgroup>
 <thead>
 <tr class="header">
 <th align="center"> </th>

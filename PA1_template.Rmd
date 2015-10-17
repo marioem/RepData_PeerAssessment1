@@ -38,8 +38,10 @@ The mean and median values of the total number of steps taken per day is shown i
 
 ```{r table1, message=FALSE}
 require(pander)
-pander(tbl)
+
+pander(tbl, style = "rmarkdown")
 ```
+
   
   
   
@@ -111,8 +113,9 @@ newmedian <- median(totstepsday2$tot)
 
 tbl2 <- cbind(cbind(mean = c(origmean,newmean)), cbind(median = c(origmedian, newmedian)))
 rownames(tbl2) <- c("Data with missing values", "Data with imputed values")
-pander(tbl2)
+pander(tbl2, style = "rmarkdown")
 ```
+
   
   
   
