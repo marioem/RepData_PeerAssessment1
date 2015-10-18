@@ -6,6 +6,13 @@
 
 
 ```r
+if(!file.exists("activity.csv")) {
+    if(!file.exists("activity.zip")) {
+        stop("Missing input data file")
+    }
+    else
+        unzip("activity.zip")
+}
 df <- read.csv("activity.csv",stringsAsFactors = F)
 df$date <- as.Date(df$date, "%Y-%m-%d")
 
@@ -104,7 +111,7 @@ axis.Date(side = 1, x = df$date, format = "%Y-%m-%d")
 
 ![](PA1_template_files/figure-html/marginplot-1.png) 
 
-Red squares on the x axis margin indicate dates for which there are missing `steps` values. It can be seen that for the days with missing `steps` values there are no measurements available (no blue dots), so the algorithm for imputing missing values must do so for all intervals for the 8 days with missing values.
+Red squares on the x axis margin indicate dates for which there are missing `steps` values. It can be seen that for the days with missing `steps` values there are no measurements available at all (no blue dots), so the algorithm for imputing missing values must do so for all intervals for the 8 days with missing values.
   
   
 ### Missing Data Imputation
