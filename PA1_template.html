@@ -84,7 +84,7 @@ origmedian &lt;- median(totstepsday$tot)
 
 tbl &lt;- cbind(values = c(origmean, origmedian))
 rownames(tbl) &lt;- c(&quot;mean&quot;, &quot;median&quot;)</code></pre>
-<p>The mean and median values of the total number of steps taken per day is shown in the following table:</p>
+<p>The mean and median values of the total number of steps taken per day are shown in the following table:</p>
 <pre class="r"><code>require(pander)
 
 pander(tbl, style = &quot;rmarkdown&quot;)</code></pre>

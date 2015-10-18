@@ -35,7 +35,7 @@ tbl <- cbind(values = c(origmean, origmedian))
 rownames(tbl) <- c("mean", "median")
 ```
 
-The mean and median values of the total number of steps taken per day is shown in the following table:
+The mean and median values of the total number of steps taken per day are shown in the following table:
 
 
 ```r
